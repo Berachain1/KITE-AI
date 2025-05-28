@@ -19,7 +19,7 @@ Sebuah project **kite AI auto chat** yang mudah digunakan.
 
    ```bash
    git clone https://github.com/supriadijaya/KITE-AI.git
-- cd KITE-AI
-- npm install
-- nano accounts.txt
-- npm start
+  cd KITE-AI
+  npm install
+  nano accounts.txt
+  npm start
