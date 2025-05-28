@@ -15,11 +15,33 @@ Sebuah project **kite AI auto chat** yang mudah digunakan.
 
 1. Clone repo ini ke komputer kamu:
 
-   ---
+    ```bash
+    git clone https://github.com/supriadijaya/KITE-AI.git
+    ```
 
-   ```bash
-   git clone https://github.com/supriadijaya/KITE-AI.git
-  cd KITE-AI
-  npm install
-  nano accounts.txt
-  npm start
+2. Masuk ke direktori proyek:
+
+    ```bash
+    cd KITE-AI
+    ```
+
+3. Install dependencies:
+
+    ```bash
+    npm install
+    ```
+
+4. Edit file `accounts.txt` jika diperlukan:
+
+    ```bash
+    nano accounts.txt
+    ```
+
+5. Jalankan aplikasi:
+
+    ```bash
+    npm start
+    ```
+
+---
+
