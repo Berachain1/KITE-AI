@@ -11,25 +11,33 @@ import moment from 'moment-timezone';
 import crypto from 'crypto';
 import { createParser } from 'eventsource-parser';
 
-
-function getTimestamp() {
-  return moment().tz('Asia/Jakarta').format('D/M/YYYY, HH:mm:ss');
-}
-
 function displayBanner() {
   const width = process.stdout.columns || 80;
-  const banner = figlet.textSync('\n NT EXHAUST', { font: "ANSI Shadow", horizontalLayout: 'Speed' });
-  banner.split('\n').forEach(line => {
-    console.log(chalk.cyanBright(line.padStart(line.length + Math.floor((width - line.length) / 2))));
+
+  const banner = [
+    '\x1b[91m           _____ _____  _____  _____   ____  _____    _____ _   _ _____  \x1b[0m',
+    '\x1b[91m     /\\   |_   _|  __ \\|  __ \\|  __ \\ / __ \\|  __ \\  |_   _| \\ | |  __ \\ \x1b[0m',
+    '\x1b[91m    /  \\    | | | |__) | |  | | |__) | |  | | |__) |   | | |  \\| | |  | |\x1b[0m',
+    '\x1b[97m   / /\\ \\   | | |  _  /| |  | |  _  /| |  | |  ___/    | | | . ` | |  | |\x1b[0m',
+    '\x1b[97m  / ____ \\ _| |_| | \\ \\| |__| | | \\ \\| |__| | |       _| |_| |\\  | |__| |\x1b[0m',
+    '\x1b[97m /_/    \\_\\_____|_|  \\_\\_____/|_|  \\_\\\\____/|_|      |_____|_| \\_|_____/\x1b[0m',
+    '',
+    '\x1b[91m🇮🇩  Join My telegram channel\x1b[0m | t.me/AIRDROPRSIND123',
+    '\x1b[93mFor business DM : https://t.me/Annisaazzahra123\x1b[0m',
+    '='.repeat(80)
+  ];
+
+  banner.forEach(line => {
+    console.log(line.padStart(Math.floor((width + line.length) / 2)));
   });
-  console.log(chalk.cyanBright(' '.repeat((width - 50) / 2) + '=== Telegram Channel 🚀 : NT Exhaust ( @NTExhaust ) ==='));
-  console.log(chalk.yellowBright(' '.repeat((width - 30) / 2) + '✪ KITE AI AUTO DAILY QUIZ & CHAT AI ✪\n'));
 }
 
+// ✅ Tambahkan ini setelah displayBanner
 const rl = createInterface({
   input: process.stdin,
-  output: process.stdout,
+  output: process.stdout
 });
+
 
 async function promptUser(question) {
   const answer = await rl.question(chalk.white(question));
@@ -38,6 +46,10 @@ async function promptUser(question) {
 
 function sleep(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+function getTimestamp() {
+  return moment().tz('Asia/Jakarta').format('HH:mm:ss');
 }
 
 async function typeText(text, color, noType = false) {
