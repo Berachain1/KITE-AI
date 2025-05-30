@@ -32,7 +32,7 @@ function displayBanner() {
   });
 }
 
-// ✅ Tambahkan ini setelah displayBanner
+// ✅gausahotakatik
 const rl = createInterface({
   input: process.stdin,
   output: process.stdout
