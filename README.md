@@ -19,7 +19,7 @@ KITE-AI is a powerful chatbot automation tool built with Node.js, designed to si
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/yourusername/KITE-AI.git
+git clone https://github.com/Berachain1/KITE-AI.git
 cd KITE-AI
 ```
 
